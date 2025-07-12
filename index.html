@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-left">Employee Directory</div>
+    <div class="header-center">
+      <input type="text" id="searchInput" placeholder="Search by name or email" oninput="renderEmployees()" />
+    </div>
+    <div class="header-right">
+      <button onclick="toggleFilter()">Filter</button>
+    </div>
+  </header>
+
+  <!-- Control Bar -->
+  <div class="control-bar">
+    <div class="control-left">
+      <label for="sortBy">Sort:</label>
+      <select id="sortBy" onchange="renderEmployees()">
+        <option value="">--Select--</option>
+        <option value="firstName">First Name</option>
+        <option value="department">Department</option>
+      </select>
+
+      <label for="itemsPerPage">Show:</label>
+      <select id="itemsPerPage" onchange="renderEmployees()">
+        <option>10</option>
+        <option>25</option>
+        <option>50</option>
+        <option>100</option>
+      </select>
+    </div>
+    <div class="control-right">
+      <button class="add-btn" onclick="showForm()">Add Employee</button>
+    </div>
+  </div>
+
+  <!-- Filter Sidebar -->
+  <div id="filterSidebar" class="filter-sidebar">
+    <h3>Filter</h3>
+    <input type="text" id="filterFirst" placeholder="First Name" />
+    <input type="text" id="filterDept" placeholder="Department" />
+    <input type="text" id="filterRole" placeholder="Role" />
+    <button onclick="applyFilters()">Apply</button>
+    <button onclick="resetFilters()">Reset</button>
+  </div>
+
+  <!-- Employee List -->
+  <div id="employeeList" class="employee-container"></div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Employee Directory App. All rights reserved.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add/Edit Employee</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="formTitle">Add Employee</h1>
+  </header>
+
+  <div class="form-container">
+    <form id="employeeForm">
+      <input type="hidden" id="empId" />
+
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required />
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" required />
+
+      <div class="form-row">
+        <div class="form-half">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-half">
+          <label for="department">Department:</label>
+          <select id="department" required>
+            <option value="">Select</option>
+            <option value="HR">HR</option>
+            <option value="IT">IT</option>
+            <option value="Finance">Finance</option>
+            <option value="Operations">Operations</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="role">Role:</label>
+      <select id="role" required>
+        <option value="">Select</option>
+        <option value="Manager">Manager</option>
+        <option value="Developer">Developer</option>
+        <option value="Analyst">Analyst</option>
+        <option value="Designer">Designer</option>
+      </select>
+
+      <div class="form-actions">
+        <button type="button" onclick="cancelForm()">Cancel</button>
+        <button type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>&copy; 2025 Employee Directory</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

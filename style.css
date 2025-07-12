@@ -1,0 +1,234 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  flex: 1;
+  font-size: 1.5rem;
+}
+
+.header-center {
+  flex: 2;
+  text-align: center;
+}
+
+.header-center input {
+  width: 60%;
+  padding: 0.4rem;
+}
+
+.header-right {
+  flex: 1;
+  text-align: right;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 0.5rem;
+  margin: 0.2rem;
+  width: 100%;
+}
+
+button {
+  margin: 0.2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.control-bar {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.control-left select {
+  margin-right: 1rem;
+  padding: 0.4rem;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.employee-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.employee-card {
+  background: white;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 0 5px #ccc;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.employee-card h4 {
+  margin: 0 0 0.5rem 0;
+}
+
+.employee-card p {
+  margin: 0.2rem 0;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.filter-sidebar {
+  position: fixed;
+  right: -300px;
+  top: 60px;
+  width: 250px;
+  background: #f0f0f0;
+  padding: 1rem;
+  transition: right 0.3s;
+  z-index: 999;
+}
+
+.filter-sidebar.active {
+  right: 0;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #ddd;
+}
+footer {
+  background: #222;
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-half {
+  flex: 1;
+}
+
+/* Small buttons aligned right */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.form-actions button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+.form-actions button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.form-actions button[type="button"] {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.form-actions button[type="button"]:hover {
+  background-color: #ccc;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .employee-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-center input {
+    width: 100%;
+  }
+
+  .control-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .control-left,
+  .control-right {
+    width: 100%;
+  }
+
+  .control-right {
+    text-align: right;
+  }
+}
