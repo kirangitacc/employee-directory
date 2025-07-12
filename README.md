@@ -44,7 +44,7 @@ A responsive and interactive Employee Directory Web Interface built using **HTML
 
 ## 📸 Screenshots
 
-*(Optional: Add UI screenshots or a GIF demo to visually showcase features and layout)*
+*(Optional: screenshots are uploaded in images folder)*
 
 ---
 
@@ -52,7 +52,6 @@ A responsive and interactive Employee Directory Web Interface built using **HTML
 
 ### ✅ Challenges Faced
 
-- Maintaining clean, modular JavaScript logic without relying on a backend
 - Handling form validation and conditional rendering using pure DOM methods
 - Designing a fully responsive interface compatible with desktop and mobile devices
 
